@@ -9,22 +9,20 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS20-Unit6-01-PWA/sw.js", {
-    scope: "/ICS20-Unit6-01-PWA/",
+  navigator.serviceWorker.register("/ICS20-Unit5-07-HTML/sw.js", {
+    scope: "/ICS20-Unit5-07-HTML/",
   })
 }
 
 /**
- * This function converts the degrees from fahrenheit to celsius
+ * This function multiplies numbers using loops
  */
 function convert() {
-  // input
-  const fahrenheit = parseInt(document.getElementById("fahrenheit").value)
-
-  // process
-  const celsius = ((fahrenheit - 32) * 5) / 9
-
-  // output
-  document.getElementById("celsius").innerHTML =
-    "<p>The  temperature in celsius is: " + celsius.toFixed(2) + "°<p>"
+  const number = parseInt(document.getElementById("number").value);
+  let total = 0;
+  
+  for (let counter = 1; counter <= number; counter++) {
+    total += counter;
+  }
+  document.getElementById("answer").innerHTML = "The answer is: " + total;
 }
